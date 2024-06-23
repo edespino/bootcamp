@@ -101,8 +101,7 @@ RUN     cp /tmp/90-cbdb-sysctl.conf /etc/sysctl.conf && \
         ssh-keygen -A && \
         echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
 
-RUN     cd /tmp/ && \
-        git clone --branch main --single-branch --depth=1 https://github.com/cloudberrydb/cloudberrydb.git
+RUN     git clone --branch main --single-branch --depth=1 https://github.com/cloudberrydb/cloudberrydb.git /tmp/cloudberrydb
 
 RUN     cd /tmp/cloudberrydb && \
         ./configure --prefix=/usr/local/cloudberry-db \
@@ -129,6 +128,13 @@ RUN     cd /tmp/cloudberrydb && \
 
 RUN     cd /tmp/cloudberrydb && \
         make install
+
+RUN     git clone --branch main --single-branch --depth=1 https://github.com/cloudberrydb/gpbackup.git /tmp/gpbackup
+
+RUN     cd /tmp/gpbackup && \
+        export GOPATH=/tmp/go && \
+        make && \
+        cp /tmp/go/bin/gpbackup /tmp/go/bin/gprestore /tmp/go/bin/gpbackup_helper /usr/local/cloudberry-db/bin
 
 EXPOSE 5432 22
 
