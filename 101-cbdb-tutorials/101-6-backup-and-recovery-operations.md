@@ -140,3 +140,17 @@ Tables restored:  1 / 1 [=======================================================
   ```
 
 The table should show 1024552 rows again as it was prior to the truncate call.
+
+## Congratulations you completed the Cloudberry Database 101 Tutorials.
+
+The series included the following tutorials. If would like to perform them again, please drop the `tutorial` database before starting.
+
+- [Lesson 0: Introduction to Database and CloudberryDB Architecture](../101-cbdb-tutorials/101-0-introduction-to-database-and-cloudberrydb-architecture.md)
+- [Lesson 1: Create Users and Roles](../101-cbdb-tutorials/101-1-create-users-and-roles.md)
+- [Lesson 2: Create and Prepare Database](../101-cbdb-tutorials/101-2-create-and-prepare-database.md)
+- [Lesson 3: Create Tables](../101-cbdb-tutorials/101-3-create-tables.md)
+- [Lesson 4: Data Loading](../101-cbdb-tutorials/101-4-data-loading.md)
+- [Lesson 5: Queries and Performance Tuning](../101-cbdb-tutorials/101-5-queries-and-performance-tuning.md)
+- [Lesson 6: Backup and Recovery Operations](../101-cbdb-tutorials/101-6-backup-and-recovery-operations.md)
+
+Return back to the [Cloudberry Database Bootcamp here](../README.md).

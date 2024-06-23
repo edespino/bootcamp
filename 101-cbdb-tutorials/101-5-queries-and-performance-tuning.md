@@ -169,7 +169,7 @@ In the following exercise, you will generate some small tables that you can quer
     Optimizer: Pivotal Optimizer (GPORCA)
     Execution Time: 338.004 ms
     (12 rows)
-
+    
     Time: 343.866 ms
     ```
 
@@ -361,7 +361,7 @@ In this exercise, you will create a column-oriented version of the fact table an
     securitydelay        | smallint         |           |          |
     lateaircraftdelay    | smallint         |           |          |
     Distributed by: (uniquecarrier, flightnum)
-    ```
+   ```
 
     Notice that the column-oriented version is append-only and partitioned. It has seventeen child files for the partitions, one for each month from June 2009 through October 2010.
 
@@ -665,3 +665,18 @@ Time: 7.434 ms
 ```
 
 The query on the partitioned column takes much less time to execute. If you compare the explain plans for the queries in this exercise, you will see that the first query scans each of the seventeen child files, while the second scans just one child file. The reduction in I/O and CPU time explains the improved execution time. 
+
+## What's next
+
+In this tutorial, you had an overview of how Cloudberry Database processes queries. You learned a small portion of processes that can be useful when you write and tune queries.
+
+You can now move on to the next tutorial, [Lesson 6: Backup and Recovery Operations](../101-cbdb-tutorials/101-6-backup-and-recovery-operations.md), to learn about Backup and Recovery Operations using `gpdump` and `gprestore`.
+
+Other tutorials:
+
+- [Lesson 0: Introduction to Database and CloudberryDB Architecture](../101-cbdb-tutorials/101-0-introduction-to-database-and-cloudberrydb-architecture.md)
+- [Lesson 1: Create Users and Roles](../101-cbdb-tutorials/101-1-create-users-and-roles.md)
+- [Lesson 2: Create and Prepare Database](../101-cbdb-tutorials/101-2-create-and-prepare-database.md)
+- [Lesson 3: Create Tables](../101-cbdb-tutorials/101-3-create-tables.md)
+- [Lesson 4: Data Loading](../101-cbdb-tutorials/101-4-data-loading.md)
+- [Lesson 5: Queries and Performance Tuning](../101-cbdb-tutorials/101-5-queries-and-performance-tuning.md)

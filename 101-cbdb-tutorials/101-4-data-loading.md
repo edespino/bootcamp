@@ -388,7 +388,9 @@ In this tutorial, you learned how to load data into Cloudberry Database. You lea
 
 Other tutorials:
 
+- [Lesson 0: Introduction to Database and CloudberryDB Architecture](../101-cbdb-tutorials/101-0-introduction-to-database-and-cloudberrydb-architecture.md)
 - [Lesson 1: Create Users and Roles](../101-cbdb-tutorials/101-1-create-users-and-roles.md)
 - [Lesson 2: Create and Prepare Database](../101-cbdb-tutorials/101-2-create-and-prepare-database.md)
 - [Lesson 3: Create Tables](../101-cbdb-tutorials/101-3-create-tables.md)
+- [Lesson 4: Data Loading](../101-cbdb-tutorials/101-4-data-loading.md)
 - [Lesson 6: Backup and Recovery Operations](../101-cbdb-tutorials/101-6-backup-and-recovery-operations.md)

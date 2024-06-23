@@ -225,6 +225,8 @@ After creating users and groups, you can follow [Lesson 2: Create and Prepare Da
 
 Other tutorials:
 
+- [Lesson 0: Introduction to Database and CloudberryDB Architecture](../101-cbdb-tutorials/101-0-introduction-to-database-and-cloudberrydb-architecture.md)
+- [Lesson 1: Create Users and Roles](../101-cbdb-tutorials/101-1-create-users-and-roles.md)
 - [Lesson 3: Create Tables](../101-cbdb-tutorials/101-3-create-tables.md)
 - [Lesson 4: Data Loading](../101-cbdb-tutorials/101-4-data-loading.md)
 - [Lesson 5: Queries and Performance Tuning](../101-cbdb-tutorials/101-5-queries-and-performance-tuning.md)
