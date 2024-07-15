@@ -8,12 +8,12 @@
 
 rm -rf /run/nologin
 
-echo $(grep $(hostname) /etc/hosts | cut -f1) mdw  >> /etc/hosts
+echo $(grep $(hostname) /etc/hosts | cut -f1) cdw  >> /etc/hosts
 echo "127.0.0.1 $(cat ~/orig_hostname)" >> /etc/hosts
 
 ## Set gpadmin ownership - Clouberry install directory and supporting
 ## cluster creation files.
-chown -R gpadmin.gpadmin /usr/local/cloudberry-db \
+chown -R gpadmin.gpadmin /usr/local/cloudberry \
                          /tmp/gpinitsystem_singlenode \
                          /tmp/gpdb-hosts
 
@@ -23,8 +23,8 @@ su gpadmin -l \
                ssh-keygen -t rsa -b 4096 -C gpadmin -f /home/gpadmin/.ssh/id_rsa -P \"\" > /dev/null 2>&1; \
                cat /home/gpadmin/.ssh/id_rsa.pub >> /home/gpadmin/.ssh/authorized_keys; \
                chmod 600 /home/gpadmin/.ssh/authorized_keys; \
-               ssh-keyscan -t rsa mdw > /home/gpadmin/.ssh/known_hosts; \
-               ssh mdw uptime"
+               ssh-keyscan -t rsa cdw > /home/gpadmin/.ssh/known_hosts; \
+               ssh cdw uptime"
 
 cat <<'EOF'
 

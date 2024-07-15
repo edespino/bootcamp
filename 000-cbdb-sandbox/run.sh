@@ -17,7 +17,7 @@ PIP_INDEX_URL_VAR="${PIP_INDEX_URL_VAR:-$DEFAULT_PIP_INDEX_URL_VAR}"
 # Function to display help message
 function usage() {
     echo "Usage: $0 [-o <os_version>] [-c <codebase_version>] [-b]"
-    echo "  -o  OS version (valid values: centos7, rockylinux9; default: $DEFAULT_OS_VERSION, or set via OS_VERSION environment variable)"
+    echo "  -o  OS version (valid values: centos7, rockylinux8, rockylinux9; default: $DEFAULT_OS_VERSION, or set via OS_VERSION environment variable)"
     echo "  -c  Codebase version (valid values: main, or determined from release zip file name)"
     echo "  -t  Timezone (default: Asia/Shanghai, or set via TIMEZONE_VAR environment variable)"
     echo "  -p  Python Package Index (PyPI) (default: https://pypi.org/simple, or set via PIP_INDEX_URL_VAR environment variable)"
@@ -75,6 +75,9 @@ fi
 case "${OS_VERSION}" in
     centos7)
         OS_DOCKER_IMAGE="centos7"
+        ;;
+    rockylinux8)
+        OS_DOCKER_IMAGE="rockylinux8"
         ;;
     rockylinux9)
         OS_DOCKER_IMAGE="rockylinux9"
